@@ -48,10 +48,12 @@ button{font-family:var(--sans);cursor:pointer;background:none;border:none;color:
 .site-header{
   background:var(--white);position:sticky;top:0;z-index:60;
   border-bottom:1px solid var(--line);
+  transition:box-shadow .3s ease;
 }
 .header-top{
   display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
   padding:18px var(--gutter);gap:16px;
+  transition:padding .3s ease;
 }
 .header-util{display:flex;align-items:center;gap:22px}
 .header-util.left{justify-self:start}
@@ -65,6 +67,7 @@ button{font-family:var(--sans);cursor:pointer;background:none;border:none;color:
 .wordmark{
   font-family:var(--serif);font-weight:500;font-size:30px;letter-spacing:.42em;
   text-indent:.42em;color:var(--ink);white-space:nowrap;
+  transition:font-size .3s ease;
 }
 .icon-btn{position:relative;display:inline-flex;padding:4px}
 .icon-btn:hover{color:var(--red)}
@@ -80,10 +83,12 @@ button{font-family:var(--sans);cursor:pointer;background:none;border:none;color:
 .header-nav{
   display:flex;justify-content:center;gap:38px;
   padding:13px var(--gutter);border-top:1px solid var(--line);
+  max-height:60px;opacity:1;overflow:hidden;
+  transition:max-height .3s ease, padding .3s ease, opacity .25s ease, border-top-color .3s ease;
 }
 .header-nav a{
   font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:500;
-  padding:4px 0;position:relative;
+  padding:4px 0;position:relative;white-space:nowrap;
 }
 .header-nav a::after{
   content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;
@@ -96,9 +101,19 @@ button{font-family:var(--sans);cursor:pointer;background:none;border:none;color:
   text-transform:uppercase;border-bottom:1px solid var(--line);
 }
 /* condensed sticky state */
+.site-header.condensed{
+  box-shadow:0 4px 18px rgba(0,0,0,.04);
+}
 .site-header.condensed .header-top{padding:10px var(--gutter)}
 .site-header.condensed .wordmark{font-size:22px}
-.site-header.condensed .header-nav{display:none}
+.site-header.condensed .header-nav{
+  max-height:0;
+  padding-top:0;
+  padding-bottom:0;
+  opacity:0;
+  border-top-color:transparent;
+  pointer-events:none;
+}
 
 /* ---------- hero ---------- */
 .hero{position:relative;height:88vh;min-height:560px;overflow:hidden;background:var(--ink)}

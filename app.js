@@ -28,10 +28,18 @@
     toast(paused ? "Announcements paused" : "Announcements resumed");
   });
 
-  /* ---------- sticky condense ---------- */
+  /* ---------- sticky condense with hysteresis ---------- */
   var header = document.getElementById("siteHeader");
+  var isCondensed = false;
   window.addEventListener("scroll", function(){
-    header.classList.toggle("condensed", window.scrollY > 140);
+    var y = window.scrollY || window.pageYOffset;
+    if (!isCondensed && y > 150) {
+      isCondensed = true;
+      header.classList.add("condensed");
+    } else if (isCondensed && y < 90) {
+      isCondensed = false;
+      header.classList.remove("condensed");
+    }
   }, {passive:true});
 
   /* ---------- mobile nav ---------- */
