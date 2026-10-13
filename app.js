@@ -61,6 +61,7 @@
   var wishCount = document.getElementById("wishCount");
   var wishes = new Set();
   function renderWish(){
+    if (!wishCount) return;
     wishCount.hidden = wishes.size === 0;
     wishCount.textContent = wishes.size;
   }
@@ -91,9 +92,12 @@
 
   function renderBag(){
     var n = bag.length;
-    bagCount.hidden = n === 0;
-    bagCount.textContent = n;
-    drawerCount.textContent = "(" + n + ")";
+    if (bagCount) {
+      bagCount.hidden = n === 0;
+      bagCount.textContent = n;
+    }
+    if (drawerCount) drawerCount.textContent = "(" + n + ")";
+    if (!drawerItems) return;
     if (!n){
       drawerItems.innerHTML = '<p class="drawer-empty">Your bag is empty.</p>';
     } else {
@@ -111,15 +115,17 @@
         });
       });
     }
-    drawerTotal.textContent = fmt(bag.reduce(function(s, it){ return s + it.price; }, 0));
+    if (drawerTotal) drawerTotal.textContent = fmt(bag.reduce(function(s, it){ return s + it.price; }, 0));
   }
 
-  function openDrawer(){ drawer.classList.add("open"); veil.classList.add("open"); document.body.style.overflow = "hidden"; }
-  function closeDrawer(){ drawer.classList.remove("open"); veil.classList.remove("open"); document.body.style.overflow = ""; }
+  function openDrawer(){ if (drawer) drawer.classList.add("open"); if (veil) veil.classList.add("open"); document.body.style.overflow = "hidden"; }
+  function closeDrawer(){ if (drawer) drawer.classList.remove("open"); if (veil) veil.classList.remove("open"); document.body.style.overflow = ""; }
 
-  document.getElementById("bagBtn").addEventListener("click", openDrawer);
-  document.getElementById("drawerClose").addEventListener("click", closeDrawer);
-  veil.addEventListener("click", closeDrawer);
+  var bagBtn = document.getElementById("bagBtn");
+  if (bagBtn) bagBtn.addEventListener("click", openDrawer);
+  var drawerClose = document.getElementById("drawerClose");
+  if (drawerClose) drawerClose.addEventListener("click", closeDrawer);
+  if (veil) veil.addEventListener("click", closeDrawer);
 
   document.querySelectorAll(".quickadd").forEach(function(btn){
     btn.addEventListener("click", function(e){
