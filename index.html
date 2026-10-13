@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AURÉLIA — Fine Jewelry | Addis Ababa</title>
+<meta name="description" content="AURÉLIA fine jewelry. 18k gold necklaces, rings, bracelets and earrings, hand-finished in our Addis Ababa atelier. Complimentary delivery and certified authenticity.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announce" id="announce">
+  <p class="announce-msg" id="announceMsg">Complimentary delivery across Addis Ababa</p>
+  <button class="announce-pause" id="announcePause" aria-label="Pause announcements">
+    <span></span><span></span>
+  </button>
+</div>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="header-top">
+    <div class="header-util left">
+      <a href="#boutiques"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Addis Ababa</a>
+      <a href="#contact">Contact us</a>
+      <a href="#services">Services</a>
+    </div>
+    <a class="wordmark" href="#top" aria-label="Aurélia home">AURÉLIA</a>
+    <div class="header-util right">
+      <button class="icon-btn" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg></button>
+      <button class="icon-btn" aria-label="Account"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 5-5.5 8-5.5s6.5 1.5 8 5.5"/></svg></button>
+      <button class="icon-btn" id="wishBtn" aria-label="Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20.5S3.5 15.5 3.5 9.6A4.6 4.6 0 0 1 8.1 5c1.7 0 3.1.9 3.9 2.2A4.6 4.6 0 0 1 15.9 5a4.6 4.6 0 0 1 4.6 4.6c0 5.9-8.5 10.9-8.5 10.9z"/></svg><span class="count" id="wishCount" hidden>0</span></button>
+      <button class="icon-btn" id="bagBtn" aria-label="Shopping bag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5.5 8h13l-1 12.5h-11L5.5 8z"/><path d="M9 10V6.5a3 3 0 0 1 6 0V10"/></svg><span class="count" id="bagCount" hidden>0</span></button>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="header-nav" id="headerNav">
+    <a href="#creations">High Jewelry</a>
+    <a href="#categories">Necklaces</a>
+    <a href="#creations">Rings</a>
+    <a href="#categories">Bracelets</a>
+    <a href="#categories">Earrings</a>
+    <a href="#atelier">The Atelier</a>
+    <a href="#maison">La Maison</a>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#creations">High Jewelry</a>
+    <a href="#categories">Necklaces</a>
+    <a href="#creations">Rings</a>
+    <a href="#categories">Bracelets</a>
+    <a href="#categories">Earrings</a>
+    <a href="#atelier">The Atelier</a>
+    <a href="#maison">La Maison</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <img class="hero-img" src="assets/hero.jpg" alt="Woman wearing Aurélia gold earrings and necklace" fetchpriority="high">
+  <div class="hero-scrim"></div>
+  <div class="hero-copy">
+    <p class="hero-kicker reveal">The new collection</p>
+    <h1 class="reveal">Worn forever</h1>
+    <p class="hero-sub reveal">Eighteen-karat gold, cut stones, and nothing you will ever want to take off.</p>
+    <a class="btn btn-outline-w" href="#creations">Discover the collection</a>
+  </div>
+</section>
+
+<!-- ICONIC CREATIONS CAROUSEL -->
+<section class="section" id="creations">
+  <div class="section-head">
+    <h2>Iconic creations</h2>
+    <p class="serif-sub">The pieces our clients ask for by name.</p>
+  </div>
+  <div class="carousel-wrap">
+    <button class="car-arrow prev" id="carPrev" aria-label="Previous products"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <div class="carousel" id="carousel">
+
+      <article class="card" data-id="riviere-necklace" data-name="Rivière Necklace" data-price="96500">
+        <div class="card-media"><span class="badge">New</span>
+          <img src="assets/necklace-1.jpg" alt="Rivière necklace in 18k yellow gold with diamond pavé" loading="lazy">
+          <button class="wish" aria-label="Add to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20.5S3.5 15.5 3.5 9.6A4.6 4.6 0 0 1 8.1 5c1.7 0 3.1.9 3.9 2.2A4.6 4.6 0 0 1 15.9 5a4.6 4.6 0 0 1 4.6 4.6c0 5.9-8.5 10.9-8.5 10.9z"/></svg></button>
+          <button class="quickadd">Add to bag</button>
+        </div>
+        <div class="card-body"><h3>Rivière Necklace</h3><p class="variant">18k yellow gold, diamond pavé</p><p class="price">Br 96,500</p></div>
+      </article>
+
+      <article class="card" data-id="solstice-ring" data-name="Solstice Ring" data-price="112000">
+        <div class="card-media">
+          <img src="assets/ring-1.jpg" alt="Solstice solitaire diamond ring in 18k gold" loading="lazy">
+          <button class="wish" aria-label="Add to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20.5S3.5 15.5 3.5 9.6A4.6 4.6 0 0 1 8.1 5c1.7 0 3.1.9 3.9 2.2A4.6 4.6 0 0 1 15.9 5a4.6 4.6 0 0 1 4.6 4.6c0 5.9-8.5 10.9-8.5 10.9z"/></svg></button>
+          <button class="quickadd">Add to bag</button>
+        </div>
+        <div class="card-body"><h3>Solstice Ring</h3><p class="variant">18k gold, brilliant-cut solitaire</p><p class="price">Br 112,000</p></div>
+      </article>
+
+      <article class="card" data-id="maille-bracelet" data-name="Maille Bracelet" data-price="64500">
+        <div class="card-media">
+          <img src="assets/bracelet-1.jpg" alt="Maille gold mesh bracelet with toggle clasp" loading="lazy">
+          <button class="wish" aria-label="Add to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20.5S3.5 15.5 3.5 9.6A4.6 4.6 0 0 1 8.1 5c1.7 0 3.1.9 3.9 2.2A4.6 4.6 0 0 1 15.9 5a4.6 4.6 0 0 1 4.6 4.6c0 5.9-8.5 10.9-8.5 10.9z"/></svg></button>
+          <button class="quickadd">Add to bag</button>
+        </div>
+        <div class="card-body"><h3>Maille Bracelet</h3><p class="variant">18k gold mesh, toggle clasp</p><p class="price">Br 64,500</p></div>
+      </article>
+
+      <article class="card" data-id="lune-earrings" data-name="Lune Earrings" data-price="52400">
+        <div class="card-media"><span class="badge">New</span>
+          <img src="assets/earrings-2.jpg" alt="Lune rose gold diamond hoop earrings" loading="lazy">
+          <button class="wish" aria-label="Add to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20.5S3.5 15.5 3.5 9.6A4.6 4.6 0 0 1 8.1 5c1.7 0 3.1.9 3.9 2.2A4.6 4.6 0 0 1 15.9 5a4.6 4.6 0 0 1 4.6 4.6c0 5.9-8.5 10.9-8.5 10.9z"/></svg></button>
+          <button class="quickadd">Add to bag</button>
+        </div>
+        <div class="card-body"><h3>Lune Earrings</h3><p class="variant">18k rose gold, diamond hoops</p><p class="price">Br 52,400</p></div>
+      </article>
+
+      <article class="card" data-id="chaine-necklace" data-name="Chaîne d'Or Necklace" data-price="58000">
+        <div class="card-media">
+          <img src="assets/necklace-2.jpg" alt="Chaîne d'Or hand-polished gold link necklace" loading="lazy">
+          <button class="wish" aria-label="Add to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20.5S3.5 15.5 3.5 9.6A4.6 4.6 0 0 1 8.1 5c1.7 0 3.1.9 3.9 2.2A4.6 4.6 0 0 1 15.9 5a4.6 4.6 0 0 1 4.6 4.6c0 5.9-8.5 10.9-8.5 10.9z"/></svg></button>
+          <button class="quickadd">Add to bag</button>
+        </div>
+        <div class="card-body"><h3>Chaîne d'Or Necklace</h3><p class="variant">18k gold, hand-polished links</p><p class="price">Br 58,000</p></div>
+      </article>
+
+      <article class="card" data-id="anneau-ring" data-name="Anneau d'Or Ring" data-price="36800">
+        <div class="card-media">
+          <img src="assets/ring-2.jpg" alt="Anneau d'Or polished gold band ring" loading="lazy">
+          <button class="wish" aria-label="Add to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20.5S3.5 15.5 3.5 9.6A4.6 4.6 0 0 1 8.1 5c1.7 0 3.1.9 3.9 2.2A4.6 4.6 0 0 1 15.9 5a4.6 4.6 0 0 1 4.6 4.6c0 5.9-8.5 10.9-8.5 10.9z"/></svg></button>
+          <button class="quickadd">Add to bag</button>
+        </div>
+        <div class="card-body"><h3>Anneau d'Or Ring</h3><p class="variant">18k yellow gold, polished band</p><p class="price">Br 36,800</p></div>
+      </article>
+
+      <article class="card" data-id="lumiere-pendant" data-name="Lumière Pendant" data-price="74200">
+        <div class="card-media"><span class="badge">New</span>
+          <img src="assets/necklace-3.jpg" alt="Lumière diamond pendant in 18k gold" loading="lazy">
+          <button class="wish" aria-label="Add to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20.5S3.5 15.5 3.5 9.6A4.6 4.6 0 0 1 8.1 5c1.7 0 3.1.9 3.9 2.2A4.6 4.6 0 0 1 15.9 5a4.6 4.6 0 0 1 4.6 4.6c0 5.9-8.5 10.9-8.5 10.9z"/></svg></button>
+          <button class="quickadd">Add to bag</button>
+        </div>
+        <div class="card-body"><h3>Lumière Pendant</h3><p class="variant">18k gold, brilliant-cut diamond</p><p class="price">Br 74,200</p></div>
+      </article>
+
+      <article class="card" data-id="goutte-earrings" data-name="Goutte Earrings" data-price="41900">
+        <div class="card-media">
+          <img src="assets/earrings-1.jpg" alt="Goutte gold earrings with pearl drops" loading="lazy">
+          <button class="wish" aria-label="Add to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20.5S3.5 15.5 3.5 9.6A4.6 4.6 0 0 1 8.1 5c1.7 0 3.1.9 3.9 2.2A4.6 4.6 0 0 1 15.9 5a4.6 4.6 0 0 1 4.6 4.6c0 5.9-8.5 10.9-8.5 10.9z"/></svg></button>
+          <button class="quickadd">Add to bag</button>
+        </div>
+        <div class="card-body"><h3>Goutte Earrings</h3><p class="variant">18k gold, pearl drops</p><p class="price">Br 41,900</p></div>
+      </article>
+
+    </div>
+    <button class="car-arrow next" id="carNext" aria-label="Next products"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+</section>
+
+<hr class="hairline">
+
+<!-- CATEGORIES -->
+<section class="section" id="categories">
+  <div class="section-head">
+    <h2>Shop by category</h2>
+    <p class="serif-sub">Four crafts, one standard: pieces that outlive trends.</p>
+  </div>
+  <div class="cat-grid">
+    <a class="cat-tile" href="#creations">
+      <img src="assets/necklace-2.jpg" alt="Gold necklaces" loading="lazy">
+      <span class="cat-label">Necklaces</span>
+    </a>
+    <a class="cat-tile" href="#creations">
+      <img src="assets/ring-1.jpg" alt="Diamond rings" loading="lazy">
+      <span class="cat-label">Rings</span>
+    </a>
+    <a class="cat-tile" href="#creations">
+      <img src="assets/bracelet-1.jpg" alt="Gold bracelets" loading="lazy">
+      <span class="cat-label">Bracelets</span>
+    </a>
+    <a class="cat-tile" href="#creations">
+      <img src="assets/earrings-1.jpg" alt="Gold earrings" loading="lazy">
+      <span class="cat-label">Earrings</span>
+    </a>
+  </div>
+</section>
+
+<!-- ATELIER EDITORIAL BANNER -->
+<section class="banner" id="atelier">
+  <img src="assets/craft-1.jpg" alt="Goldsmith polishing a jewel in the Aurélia atelier" loading="lazy">
+  <div class="banner-scrim"></div>
+  <div class="banner-copy">
+    <p class="hero-kicker">The atelier</p>
+    <h2>Cut, set, and polished<br>by hand</h2>
+    <p class="serif-sub light">Every Aurélia piece passes through eleven pairs of hands before it reaches yours.</p>
+    <a class="btn btn-outline-w" href="#maison">Inside the maison</a>
+  </div>
+</section>
+
+<!-- SAVOIR-FAIRE SPLIT -->
+<section class="section split" id="maison">
+  <div class="split-media">
+    <img src="assets/craft-2.jpg" alt="Setting a green gemstone by hand" loading="lazy">
+  </div>
+  <div class="split-copy">
+    <p class="eyebrow">Savoir-faire</p>
+    <h2>Slow jewelry, made<br>to be kept</h2>
+    <p class="serif-body">We cast in small batches, set every stone under magnification, and polish until the metal holds light like water. No rushed lines, no seasonal disposables — pieces engineered to be worn daily and handed down.</p>
+    <a class="text-link" href="#creations">Explore the craft</a>
+  </div>
+</section>
+
+<hr class="hairline">
+
+<!-- BRIDAL EDITORIAL -->
+<section class="banner tall">
+  <img src="assets/editorial.jpg" alt="Bridal jewelry worn, gold pieces catching light" loading="lazy">
+  <div class="banner-scrim"></div>
+  <div class="banner-copy">
+    <p class="hero-kicker">The bridal edit</p>
+    <h2>For the day<br>everyone remembers</h2>
+    <a class="btn btn-outline-w" href="#creations">Book a private viewing</a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="service">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18.5" r="1.8"/><circle cx="17" cy="18.5" r="1.8"/></svg>
+    <h3>Complimentary delivery</h3>
+    <p>Insured courier across Addis Ababa, signature on arrival.</p>
+  </div>
+  <div class="service">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M4 9a8 8 0 0 1 14.9-3M20 15a8 8 0 0 1-14.9 3"/><path d="M18.5 2.5v4h-4M5.5 21.5v-4h4"/></svg>
+    <h3>Easy returns</h3>
+    <p>Thirty days to change your mind, no questions asked.</p>
+  </div>
+  <div class="service">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+    <h3>Certified authenticity</h3>
+    <p>Every piece ships with assay certification and a lifetime guarantee.</p>
+  </div>
+</section>
+
+<hr class="hairline">
+
+<!-- NEWSLETTER -->
+<section class="newsletter" id="contact">
+  <h2>Join the maison</h2>
+  <p class="serif-sub">Private previews, atelier stories, first word on new pieces.</p>
+  <form class="news-form" id="newsForm">
+    <input type="email" id="newsEmail" placeholder="Your email address" aria-label="Email address" required>
+    <button type="submit">Subscribe</button>
+  </form>
+  <p class="news-done" id="newsDone" hidden>Welcome to the maison. Your first preview is on its way.</p>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>Client care</h4>
+      <a href="#contact">Contact us</a>
+      <a href="#services">Delivery &amp; returns</a>
+      <a href="#services">Ring size guide</a>
+      <a href="#services">Care instructions</a>
+      <a href="#services">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <h4>Our company</h4>
+      <a href="#maison">La maison</a>
+      <a href="#atelier">The atelier</a>
+      <a href="#boutiques">Boutiques</a>
+      <a href="#maison">Sustainability</a>
+      <a href="#maison">Careers</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="#top">Terms of sale</a>
+      <a href="#top">Privacy policy</a>
+      <a href="#top">Cookie settings</a>
+    </div>
+    <div class="footer-col">
+      <h4>Follow us</h4>
+      <div class="socials">
+        <a href="#top" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#top" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 8h2.5V4.5H14A4.5 4.5 0 0 0 9.5 9v2.5H7V15h2.5v5H13v-5h2.5l.5-3.5h-3V9c0-.6.4-1 1-1z"/></svg></a>
+        <a href="#top" aria-label="X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+        <a href="#top" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="6" width="18" height="12" rx="3.5"/><path d="M10.5 9.8v4.4L14.5 12l-4-2.2z" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#top" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5c-2.5 0-4 1.7-4 3.6 0 1.1.6 2 1.5 2.3l.4-1.4c-.3-.3-.5-.7-.5-1.1 0-1.2 1-2.3 2.6-2.3 1.4 0 2.4.9 2.4 2.1 0 1.6-.7 3-1.8 3-.6 0-1-.5-.9-1.1l.5-1.9-1.5 6.3"/></svg></a>
+      </div>
+      <p class="boutique" id="boutiques">Bole Road flagship<br>Addis Ababa, Ethiopia</p>
+    </div>
+  </div>
+  <div class="footer-band">
+    <span>Shop in: Addis Ababa</span>
+    <span>Copyright © 2026 Aurélia</span>
+  </div>
+</footer>
+
+<!-- BAG DRAWER -->
+<div class="drawer-veil" id="drawerVeil"></div>
+<aside class="drawer" id="bagDrawer" aria-label="Shopping bag">
+  <div class="drawer-head">
+    <h3>Your bag <span id="drawerCount">(0)</span></h3>
+    <button class="icon-btn" id="drawerClose" aria-label="Close bag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <div class="drawer-items" id="drawerItems"></div>
+  <div class="drawer-foot">
+    <div class="drawer-total"><span>Subtotal</span><b id="drawerTotal">Br 0</b></div>
+    <button class="btn btn-ink btn-full" id="checkoutBtn">Proceed to checkout</button>
+    <p class="drawer-note">Complimentary insured delivery on every order.</p>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
