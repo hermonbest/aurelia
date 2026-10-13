@@ -4,9 +4,9 @@
 
   /* ---------- announcement rotator ---------- */
   var msgs = [
-    "Complimentary delivery across Addis Ababa",
-    "Every piece ships with assay certification",
-    "Book a private viewing at our Bole Road flagship"
+    "Quality Stainless Steel Jewellery • Wholesale & Retail",
+    "📍 ቦሌ አለምነሽ plaza 3F & 📍 22 Town square mall 1F",
+    "🤳 Call or Order: 0930535654 • Telegram: @mercyjewlery"
   ];
   var msgEl = document.getElementById("announceMsg");
   var pauseBtn = document.getElementById("announcePause");
@@ -138,7 +138,7 @@
 
   document.getElementById("checkoutBtn").addEventListener("click", function(){
     if (!bag.length){ toast("Your bag is empty"); return; }
-    toast("Demo checkout — our concierge will call you");
+    toast("Order registered — we will contact you at 0930535654");
   });
 
   /* ---------- newsletter ---------- */
@@ -148,7 +148,7 @@
     if (!input.value || input.value.indexOf("@") < 0){ toast("Please enter a valid email"); return; }
     document.getElementById("newsForm").style.display = "none";
     document.getElementById("newsDone").hidden = false;
-    toast("Subscribed — welcome to the maison");
+    toast("Subscribed — welcome to Mercy Jewelry");
   });
 
   /* ---------- toast ---------- */
